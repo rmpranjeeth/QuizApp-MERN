@@ -16,7 +16,7 @@ app.use(cors());
 const URI = "mongodb+srv://quizapp:quizapp@cluster0.izqtx.mongodb.net/?retryWrites=true&w=majority";
 
 //Port//
-const PORT = 8000;
+const PORT = 8080;
 
 //Router//
 app.use('/', router)
