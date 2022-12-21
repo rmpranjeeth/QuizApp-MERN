@@ -21,7 +21,7 @@ const CreateQuestion = () => {
   };
 
   const handleCreate = async () => {
-    const createData = await axios.post('http://localhost:5001/createQuestions', question).then((res)=>{
+    const createData = await axios.post('https://quiz-app-mern.vercel.app/createQuestions', question).then((res)=>{
       console.log(res);
     }).catch((err)=>{
       console.log(err);

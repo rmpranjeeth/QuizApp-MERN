@@ -5,7 +5,7 @@ const Cards = () => {
   const [index, setIndex] = useState(0);
   const [datas, setDatas] = useState([]);
   const [selectedItem, setSelectedItem] = useState("");
-  const URL = "http://localhost:5001";
+  const URL = "https://quiz-app-mern.vercel.app";
 
   const handleSelected = (item) => {
     console.log(item);

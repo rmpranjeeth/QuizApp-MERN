@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const EditQuestion = () => {
-  const URL = "http://localhost:5001";
+  const URL = "https://quiz-app-mern.vercel.app";
 
   const [datas, setDatas] = useState([]);
   const [counter, setCounter] = useState(0);
