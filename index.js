@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const router = require('./routes/routes');
+require("dotenv").config();
 
 const app = express();
 
@@ -13,16 +14,16 @@ app.use(express.json());
 app.use(cors());
 
 //MongoDB URI//
-const URI = "mongodb+srv://quizapp:quizapp@cluster0.izqtx.mongodb.net/?retryWrites=true&w=majority";
+
 
 //Port//
-const PORT = 8080;
+const PORT = 8000;
 
 //Router//
 app.use('/', router)
 
 //MongoDB Connection//
-mongoose.connect(URI).then(()=> {
+mongoose.connect(process.env.URI).then(()=> {
     app.listen(PORT, ()=> {
         console.log("Connected to MongoDB, server listening on port "+ PORT);
     });
